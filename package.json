@@ -1,5 +1,5 @@
 {
-  "name": "demo-auth-starter",
+  "name": "passwordless-auth",
   "version": "0.1.0",
   "private": true,
   "scripts": {
