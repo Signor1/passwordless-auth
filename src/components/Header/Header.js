@@ -4,6 +4,8 @@ import Container from "@components/Container";
 
 import styles from "./Header.module.scss";
 
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -13,7 +15,12 @@ const Header = () => {
         </p>
         <ul className={styles.headerLinks}>
           <li>
-            <Link href="/dashboard">Login</Link>
+            <SignedOut>
+              <Link href="/dashboard">Login</Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </li>
         </ul>
       </Container>
