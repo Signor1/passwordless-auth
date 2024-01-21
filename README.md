@@ -30,6 +30,7 @@ Before you start, ensure you have the following installed:
 
    ```env
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-public-clerk-publishable-key
+   CLERK_SECRET_KEY=sk_test_*********************************
    ```
 
 4. Update `clerkSettings.js` with your Clerk project URL.
