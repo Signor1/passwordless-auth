@@ -1,10 +1,20 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+} from "@clerk/nextjs";
 import "@styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ClerkProvider {...pageProps}>
-      <Component {...pageProps} />
+      <SignedIn>
+        <Component {...pageProps} />
+      </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
     </ClerkProvider>
   );
 }
